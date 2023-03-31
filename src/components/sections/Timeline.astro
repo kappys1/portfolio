@@ -1,0 +1,162 @@
+---
+import type DownloadIcon from '../icons/DownloadIcon.astro'
+import DownloadIcon from '../icons/DownloadIcon.astro'
+import ReadIcon from '../icons/ReadIcon.astro'
+import SectionTitle from '../SectionTitle.astro'
+
+const timeline = [
+	{
+		date: {
+			from: '2015',
+			to: 'Present'
+		},
+		job: 'Full Stack developer',
+		company: 'Freelance',
+		description:
+			'I developed multiple project for differents companies like Full Stack developer with MEAN and MERN stack: Betrocket, Abouit App, Bellavista jardin del norte, Volcanbox, Chicken Box Studio,',
+		image: 'blank.png'
+	},
+	{
+		date: {
+			from: '2022',
+			to: 'Present'
+		},
+		job: 'Senior Frontend developer',
+		company: 'Roche Diagnostics',
+		description: '',
+		image: 'roche_logo.png'
+	},
+	{
+		date: {
+			from: '2020',
+			to: '2022'
+		},
+		job: 'Senior Frontend developer',
+		company: 'Roche Diabetes Care',
+		description:
+			'I develop Healthcare applications diabetes patientens. \n\n I mantain, improve and create new features for the main company project. Also, I participated in the company creating new projects and arquitectures in new projects',
+		image: 'roche_logo.png'
+	},
+	{
+		date: {
+			from: '2014',
+			to: '2020'
+		},
+		job: 'Full stack developer',
+		company: 'TMT Factory',
+		description:
+			'I develop multiple applications for differents important companies like Barça, MediaMarkt, Adidas, Montblanc, etc. I developed some PWA, SPA and big applications with differents technologies and patterns.',
+		image: 'tmt.png'
+	},
+	{
+		date: {
+			from: '2013',
+			to: '2014'
+		},
+		job: 'Intern developer',
+		company: 'Imaginae',
+		description: '',
+		image: 'imaginae.png'
+	}
+]
+---
+
+<section
+	id='timeline'
+	class='flex-1 min-h-auto flex flex-col break-words py-24 mx-auto md:px-2 items-center'
+>
+	<!-- <SectionTitle title='Timeline' /> -->
+	<div
+		class='w-full shadow-lg max-w-prose p-8 px-8 border rounded-2xl border-zinc-900/10 bg-white/10 backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/20 dark:backdrop-blur'
+	>
+		<h2
+			class='flex font-semibold text-zinc-900 dark:text-zinc-100 gap-3 items-center text-md pb-4'
+		>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width='24'
+				height='24'
+				viewBox='0 0 24 24'
+				fill='none'
+				stroke='currentColor'
+				stroke-width='2'
+				stroke-linecap='round'
+				stroke-linejoin='round'
+				class='flex-none w-6 h-6'
+				><rect x='2' y='7' width='20' height='14' rx='2' ry='2'></rect><path
+					d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'></path></svg
+			><span class=''>Jobs</span>
+		</h2>
+		<ol class='flow-root'>
+			<ul role='list' class='divide-y divide-gray-200 dark:divide-gray-700'>
+				{
+					timeline.map((time) => (
+						<li class='py-3 sm:py-4'>
+							<div class='flex items-center space-x-4'>
+								<div class='relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'>
+									<img
+										class='w-8 h-8 object-contain rounded-full'
+										src={time.image}
+										alt='Neil image'
+									/>
+								</div>
+								<div class='flex-1 min-w-0'>
+									<dt class='sr-only'>Company</dt>
+									<p class='text-sm font-medium text-gray-900 truncate dark:text-white pb-1'>
+										{time.company}
+									</p>
+									<dt class='sr-only'>Role</dt>
+									<dd class='text-sm text-gray-500 truncate dark:text-gray-400'>
+										{time.job}
+									</dd>
+								</div>
+								<div class='inline-flex items-center text-base font-semibold text-gray-900 dark:text-white'>
+									<>
+										<dt class='sr-only'>Time</dt>
+										<dd
+											class='ml-auto text-xs text-zinc-600 dark:text-zinc-300'
+											aria-label='2021 until Presente'
+										>
+											<time datetime='2021'>{time.date.from}</time>
+											<span aria-hidden='true'>—</span>
+											<time datetime='2023'>{time.date.to}</time>
+										</dd>
+									</>
+								</div>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</ol>
+
+		<div class='flex gap-4'>
+			<a
+				class='inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none relative h-[30px] transform-gpu touch-none select-none border border-none border-transparent bg-white dark:bg-zinc-800 text-[13px] font-semibold leading-none text-zinc-600 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100 shadow-button-light dark:shadow-button-dark after:absolute after:-inset-[1px] after:block after:rounded-md after:bg-gradient-to-t after:from-black/5 after:opacity-50 after:transition-opacity hover:after:opacity-100 focus-visible:border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 disabled:cursor-not-allowed disabled:opacity-50 dark:after:from-black/[0.15] dark:focus-visible:ring-blue-600 w-full mt-6 group'
+				target='_blank'
+				rel='noopener noreferrer'
+				href='https://read.cv/educlopez'
+			>
+				Read.cv
+			</a>
+			<a
+				class='inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none relative h-[30px] transform-gpu touch-none select-none border border-none border-transparent bg-white dark:bg-zinc-800 text-[13px] font-semibold leading-none text-zinc-600 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100 shadow-button-light dark:shadow-button-dark after:absolute after:-inset-[1px] after:block after:rounded-md after:bg-gradient-to-t after:from-black/5 after:opacity-50 after:transition-opacity hover:after:opacity-100 focus-visible:border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 disabled:cursor-not-allowed disabled:opacity-50 dark:after:from-black/[0.15] dark:focus-visible:ring-blue-600 w-full mt-6 group'
+				target='_blank'
+				rel='noopener noreferrer'
+				href='https://read.cv/educlopez'
+			>
+				<ReadIcon
+					class='w-4 h-4 transition stroke-zinc-600 dark:stroke-zinc-400 group-active:stroke-zinc-900 group-hover:stroke-zinc-900 dark:group-hover:stroke-zinc-100 dark:group-active:stroke-zinc-50'
+				/>Read.cv
+			</a>
+			<a
+				class='inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none relative inline-flex h-[30px] transform-gpu touch-none select-none items-center justify-center gap-2 rounded-md border border-none border-transparent bg-white dark:bg-zinc-800 px-3 text-[13px] font-semibold leading-none text-zinc-600 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100 shadow-button-light dark:shadow-button-dark after:absolute after:-inset-[1px] after:block after:rounded-md after:bg-gradient-to-t after:from-black/5 after:opacity-50 after:transition-opacity hover:after:opacity-100 focus-visible:border-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 disabled:cursor-not-allowed disabled:opacity-50 dark:after:from-black/[0.15] dark:focus-visible:ring-blue-600 w-full mt-6 group'
+				target='_blank'
+				href='/2023_eduardo_calvo_lopez_curriculum.pdf'
+				><DownloadIcon
+					class='w-4 h-4 transition stroke-zinc-600 dark:stroke-zinc-400 group-active:stroke-zinc-900 group-hover:stroke-zinc-900 dark:group-hover:stroke-zinc-100 dark:group-active:stroke-zinc-50'
+				/>Descargar cv</a
+			>
+		</div>
+	</div>
+</section>
