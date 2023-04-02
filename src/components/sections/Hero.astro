@@ -1,11 +1,13 @@
 ---
+import ChevronDown from '../icons/ChevronDown.astro'
 import GithubIcon from '../icons/GithubIcon.astro'
 import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import Background from './Background.astro'
 ---
 
-<section id='hero' class='flex-1 min-h-auto flex flex-col'>
+<section id='hero' class='flex-1 min-h-auto flex flex-col xl:min-h-screen'>
 	<div
-		class='flex-1 min-h-auto flex flex-col xl:flex-row justify-evenly items-center xl:justify-center xl:min-h-screen gap-32 relative'
+		class='flex-1 flex flex-col xl:flex-row justify-evenly items-center xl:justify-center gap-32 relative'
 	>
 		<div
 			class='flex flex-col gap-4 max-w-6xl bg-white border border-gray-200 rounded-xl shadow-md dark:bg-gray-800 dark:border-gray-700 p-8 bg-opacity-90'
@@ -52,8 +54,22 @@ import LinkedinIcon from '../icons/LinkedinIcon.astro'
 
 		<img
 			src='https://res.cloudinary.com/kappys/image/upload/c_thumb,g_face,h_700,w_700/v1679614018/portfolio/ERXBAD0AX-USBKRFAKD-a2374a4bb175-512__1_-removebg-preview_lq5j3m.png'
-			alt='Hero Image'
-			class='w-[500px] xl:w-[550px] h-3/4 border-1 rounded-lg object-contain justify-center xl:mt-16 self-end xl:absolute bottom-0 right-0'
+			alt='Mi imagen de perfil'
+			class='w-[500px] xl:w-[550px] h-3/4 border-1 rounded-lg object-contain justify-center xl:mt-16 self-end xl:absolute bottom-0 right-0 drop-shadow-[5px_5px_100px_rgba(255,255,255,.2)]'
 		/>
+		<Background />
 	</div>
+	<ChevronDown
+		id='chevron-down'
+		className='self-center mb-8 hover:scale-110 cursor-pointer mt-8 transition-transform duration-300 ease-in-out'
+	/>
 </section>
+
+<script>
+	const handleGoToTimeline = () => {
+		const timeline = document.querySelector('#timeline')
+		timeline && timeline.scrollIntoView({ behavior: 'smooth' })
+	}
+	const button = document.querySelector('#chevron-down')
+	button && button.addEventListener('click', handleGoToTimeline)
+</script>

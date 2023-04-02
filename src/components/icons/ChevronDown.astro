@@ -1,0 +1,40 @@
+---
+const { className = '', id = '' } = Astro.props
+---
+
+<div class={className} id={id}>
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		class={'icon icon-tabler icon-tabler-circle-chevron-down icon-hgradient '}
+		width='56'
+		height='56'
+		viewBox='0 0 24 24'
+		stroke-width='2'
+		stroke='currentColor'
+		fill='none'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+	>
+		<linearGradient id='gradient-horizontal'>
+			<stop offset='0%' stop-color='var(--color-stop-1)'></stop>
+			<stop offset='50%' stop-color='var(--color-stop-2)'></stop>
+			<stop offset='100%' stop-color='var(--color-stop-3)'></stop>
+		</linearGradient>
+		<path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
+		<path d='M15 11l-3 3l-3 -3'></path>
+		<path d='M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18z'></path>
+	</svg>
+</div>
+
+<style>
+	#gradient-horizontal {
+		--color-stop-1: #0071ff;
+		--color-stop-2: #559ffa;
+		--color-stop-3: #186c69;
+	}
+	.icon-hgradient {
+		/* fill: url(#gradient-horizontal) gray;
+		We could use it as a stroke fill too: */
+		stroke: url(#gradient-horizontal) gray;
+	}
+</style>

@@ -6,6 +6,8 @@
     "types": ["astro/client", "preact"],
     "isolatedModules": true,
     "moduleResolution": "node",
+		"strictNullChecks": true,
+		"allowJs": true,
     "baseUrl": ".",
   }
 }

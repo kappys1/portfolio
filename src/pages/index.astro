@@ -1,10 +1,20 @@
 ---
 import Hero from 'src/components/sections/Hero.astro'
+import Post from 'src/components/sections/Post.astro'
 import Timeline from 'src/components/sections/Timeline.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout>
 	<Hero />
-	<Timeline />
+	<div
+		class='grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2'
+	>
+		<div class='flex flex-col gap-16'>
+			<Post />
+		</div>
+		<div class='space-y-10 lg:pl-16 xl:pl-24'>
+			<Timeline />
+		</div>
+	</div>
 </Layout>
