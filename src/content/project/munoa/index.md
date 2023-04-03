@@ -1,6 +1,6 @@
 ---
 title: "Munoa"
-description: "Munoa is an interactive for their palace in San Sebastian. It explain you their history."
+description: "Munoa is an interactive application for their palace in San Sebastian. It explain you their history."
 pubDate: "Apr, 04 2023"
 heroImage: "/project/munoa/home.avif"
 technologies: [
