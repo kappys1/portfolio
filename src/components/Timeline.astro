@@ -1,6 +1,7 @@
 ---
-import DownloadIcon from '../icons/DownloadIcon.astro'
-import ReadIcon from '../icons/ReadIcon.astro'
+import DownloadIcon from './icons/DownloadIcon.astro'
+import ReadIcon from './icons/ReadIcon.astro'
+import SectionTitle from './SectionTitle.astro'
 
 const timeline = [
 	{
@@ -59,11 +60,10 @@ const timeline = [
 ]
 ---
 
-<section
+<article
 	id='timeline'
-	class='flex-1 min-h-auto flex flex-col break-words py-24 mx-auto items-center'
+	class='flex-1 min-h-auto flex flex-col break-words py-24 mx-auto items-center space-y-10 w-full max-w-prose'
 >
-	<!-- <SectionTitle title='Timeline' /> -->
 	<div
 		class='w-full shadow-lg max-w-3xl p-8 px-8 border rounded-2xl border-zinc-900/10 bg-white/10 backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/20 dark:backdrop-blur'
 	>
@@ -149,4 +149,4 @@ const timeline = [
 			>
 		</div>
 	</div>
-</section>
+</article>
