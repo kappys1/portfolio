@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content'
+import dayjs from 'dayjs'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+import SectionTitle from '../SectionTitle.astro'
+
+const posts = await getCollection('blog')
+
+const getPostDate = (date: Date) => {
+	dayjs.extend(localizedFormat)
+	return dayjs(date).format('ll')
+}
+---
+
+<section id='projects' class='flex flex-col gap-12'>
+	<SectionTitle title='Recent Projects' />
+	{
+		posts &&
+			posts.map((post) => (
+				<a
+					href='#'
+					class='flex flex-col items-center bg-white border rounded-lg transition-all
+					 hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.01]
+					md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-60
+					dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
+				>
+					<img
+						class='object-cover w-full rounded-md h-96 md:max-h-64 md:h-full md:w-48 p-4'
+						src={post.data.heroImage}
+						alt=''
+					/>
+					<div class='flex flex-col justify-between p-4 leading-normal'>
+						<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+							Noteworthy technology acquisitions 2021
+						</h5>
+						<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+							Here are the biggest enterprise technology acquisitions of 2021 so
+							far, in reverse chronological order.
+						</p>
+					</div>
+				</a>
+			))
+	}
+</section>

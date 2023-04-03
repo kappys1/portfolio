@@ -5,7 +5,11 @@ import LinkedinIcon from '../icons/LinkedinIcon.astro'
 import Background from './Background.astro'
 ---
 
-<section id='hero' class='flex-1 min-h-auto flex flex-col xl:min-h-screen'>
+<section
+	id='hero'
+	class='flex-1 min-h-auto flex flex-col xl:min-h-screen relative'
+>
+	<!-- <Background /> -->
 	<div
 		class='flex-1 flex flex-col xl:flex-row justify-evenly items-center xl:justify-center gap-32 relative'
 	>
@@ -57,7 +61,6 @@ import Background from './Background.astro'
 			alt='Mi imagen de perfil'
 			class='w-[500px] xl:w-[550px] h-3/4 border-1 rounded-lg object-contain justify-center xl:mt-16 self-end xl:absolute bottom-0 right-0 drop-shadow-[5px_5px_100px_rgba(255,255,255,.2)]'
 		/>
-		<Background />
 	</div>
 	<ChevronDown
 		id='chevron-down'

@@ -31,5 +31,5 @@ export function Birds () {
 			if (vantaEffect) vantaEffect.destroy()
 		}
 	}, [vantaEffect])
-	return <div ref={myRef} className='w-full h-full'>	</div>
+	return <div ref={myRef} className='w-full h-full max-h-screen'>	</div>
 }
