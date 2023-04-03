@@ -3,21 +3,56 @@ import Layout from './Layout.astro'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import type { BlogSchema } from 'src/content/config'
+import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 
 export type Props = BlogSchema
-const { title, description, pubDate, updatedDate, heroImage, badge } =
-	Astro.props
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	badge,
+	technologies
+} = Astro.props
 dayjs.extend(localizedFormat)
 const displayDate = dayjs(pubDate).format('ll')
 ---
 
 <Layout title={title} description={description} image={heroImage}>
-	<main class='md:flex md:justify-center'>
-		<article class='prose prose-lg max-w-[750px] prose-img:mx-auto'>
-			{heroImage && <img src={heroImage} alt={title} class='w-full mb-6' />}
-			<h1 class='title my-2 text-4xl font-bold'>{title}</h1>
+	<section class='w-full md:flex md:justify-center py-4'>
+		<article
+			class='class="mx-auto w-full max-w-3xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"'
+		>
+			{
+				heroImage && (
+					<img
+						src={heroImage}
+						alt={title}
+						class='w-full mb-6 shadow-md rounded-md aspect-video object-contain'
+					/>
+				)
+			}
+			<h1
+				class='mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white'
+			>
+				{title}
+			</h1>
 			{pubDate && <time>{displayDate}</time>}
 			<br />
+			<div class='flex gap-5'>
+				{
+					technologies &&
+						technologies.map((tech) => (
+							<TechnologyIcon
+								id={`${tech.id}`}
+								src={tech.src}
+								name={tech.name}
+							/>
+						))
+				}
+			</div>
+
 			{badge && <div class='badge badge-secondary my-1'>{badge}</div>}
 			{
 				updatedDate && (
@@ -30,5 +65,5 @@ const displayDate = dayjs(pubDate).format('ll')
 			<div class='divider my-2'></div>
 			<slot />
 		</article>
-	</main>
+	</section>
 </Layout>

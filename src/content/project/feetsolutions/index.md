@@ -4,11 +4,11 @@ description: "Feet Solutions is a company that provides orthopedic insoles. I he
 pubDate: "Apr, 04 2023"
 heroImage: "/project/feetsolutions/home.avif"
 technologies: [
-	{id: "html5", name: "HTML 5", src: "icons/html5.svg" },  
-	{id: "css3", name: "CSS 3", src: "icons/css3.svg" },  
-	{id: "javascript", name: "Javascript", src: "icons/javascript.svg" },  
-	{id: "react", name: "React js", src: "icons/react.svg" },  
-	{id: "php", name: "PHP", src: "icons/php.svg" },  
+	{id: "html5", name: "HTML 5", src: "/icons/html5.svg" },  
+	{id: "css3", name: "CSS 3", src: "/icons/css3.svg" },  
+	{id: "javascript", name: "Javascript", src: "/icons/javascript.svg" },  
+	{id: "react", name: "React js", src: "/icons/react.svg" },  
+	{id: "php", name: "PHP", src: "/icons/php.svg" },  
 ]
 ---
 

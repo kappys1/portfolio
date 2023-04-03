@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
 export async function getStaticPaths({ paginate }) {
-	const posts = await getCollection('projects')
+	const posts = await getCollection('project')
 	return paginate(posts, { pageSize: 10 })
 }
 

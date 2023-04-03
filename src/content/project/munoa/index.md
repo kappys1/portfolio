@@ -4,11 +4,12 @@ description: "Munoa is an interactive application for their palace in San Sebast
 pubDate: "Apr, 04 2023"
 heroImage: "/project/munoa/home.avif"
 technologies: [
-	{id: "html5", name: "HTML 5", src: "icons/html5.svg" },  
-	{id: "styled-components", name: "Styled Components", src: "icons/styled-components.avif" },  
-	{id: "typescript", name: "typescript", src: "icons/typescript.svg" },  
-	{id: "react", name: "React js", src: "icons/react.svg" },  
-	{id: "gatsby", name: "Gatsby", src: "icons/gatsby.svg" },  
+	{id: "html5", name: "HTML 5", src: "/icons/html5.svg" },  
+	{id: "styled-components", name: "Styled Components", src: "/icons/styled-components.avif" },  
+	{id: "typescript", name: "typescript", src: "/icons/typescript.svg" },  
+	{id: "react", name: "React js", src: "/icons/react.svg" },  
+	{id: "gatsby", name: "Gatsby", src: "/icons/gatsby.svg" },  
+	{id: "strapi", name: "Strapi", src: "/icons/strapi.svg" },  
 ]
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.

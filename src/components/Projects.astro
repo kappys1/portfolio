@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import SectionTitle from './SectionTitle.astro'
+import TechnologyIcon from './TechnologyIcon.astro'
 
 const projects = await getCollection('project')
 
@@ -19,18 +20,18 @@ const getPostDate = (date: Date) => {
 			projects &&
 				projects.map((project) => (
 					<a
-						href='#'
-						class='flex flex-col items-center bg-white border rounded-lg transition-all
+						href={'/project/' + project.slug}
+						class='flex group flex-col items-center bg-white border rounded-lg transition-all relative
 						 hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.01]
-						md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-60
-						dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
+						md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-72
+						dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 '
 					>
 						<img
 							class='object-contain w-full rounded-md h-96 aspect-square p-4 md:max-h-48 md:h-full md:w-48 '
 							src={project.data.heroImage}
 							alt=''
 						/>
-						<div class='flex flex-col justify-between p-4 leading-normal'>
+						<div class='flex flex-col justify-between p-4 leading-normal gap-4'>
 							<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
 								{project.data.title}
 							</h5>
@@ -40,22 +41,11 @@ const getPostDate = (date: Date) => {
 							<div class='flex gap-5'>
 								{project.data.technologies &&
 									project.data.technologies.map((tech) => (
-										<div>
-											<img
-												data-tooltip-target={`${project.id}-${tech.id}`}
-												src={tech.src}
-												alt={tech.name}
-												class='md:max-h-8'
-											/>
-											<div
-												id={`${project.id}-${tech.id}`}
-												role='tooltip'
-												class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700'
-											>
-												{tech.name}
-												<div class='tooltip-arrow' data-popper-arrow />
-											</div>
-										</div>
+										<TechnologyIcon
+											id={`${project.id}-${tech.id}`}
+											src={tech.src}
+											name={tech.name}
+										/>
 									))}
 							</div>
 						</div>

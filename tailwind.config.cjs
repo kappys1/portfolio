@@ -64,6 +64,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		require('flowbite-typography'),
 		require('flowbite/plugin')
 	]
 }
