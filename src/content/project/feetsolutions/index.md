@@ -1,8 +1,9 @@
 ---
 title: "Feet Solutions"
 description: "Feet Solutions is a company that provides orthopedic insoles. I help them to implement new functionalities."
-pubDate: "Apr, 04 2023"
 heroImage: "/project/feetsolutions/home.avif"
+url: "https://feetsolutions.es"
+type: "fullstack"
 technologies: [
 	{id: "html5", name: "HTML 5", src: "/icons/html5.svg" },  
 	{id: "css3", name: "CSS 3", src: "/icons/css3.svg" },  

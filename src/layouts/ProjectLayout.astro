@@ -1,22 +1,12 @@
 ---
 import Layout from './Layout.astro'
-import dayjs from 'dayjs'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
-import type { BlogSchema } from 'src/content/config'
-import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 
-export type Props = BlogSchema
-const {
-	title,
-	description,
-	pubDate,
-	updatedDate,
-	heroImage,
-	badge,
-	technologies
-} = Astro.props
-dayjs.extend(localizedFormat)
-const displayDate = dayjs(pubDate).format('ll')
+import type { ProjectSchema } from 'src/content/config'
+import TechnologyIcon from 'src/components/TechnologyIcon.astro'
+import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
+
+export type Props = ProjectSchema
+const { title, description, url, heroImage, technologies } = Astro.props
 ---
 
 <Layout title={title} description={description} image={heroImage}>
@@ -34,12 +24,16 @@ const displayDate = dayjs(pubDate).format('ll')
 				)
 			}
 			<h1
-				class='mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white'
+				class='flex gap-4 mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white'
 			>
-				{title}
+				<a
+					href={url}
+					class='flex justify-center items-center no-underline text-inherit gap-4'
+				>
+					{title} <ArrowTopRight /></a
+				>
 			</h1>
-			{pubDate && <time>{displayDate}</time>}
-			<br />
+
 			<div class='flex gap-5'>
 				{
 					technologies &&
@@ -52,16 +46,6 @@ const displayDate = dayjs(pubDate).format('ll')
 						))
 				}
 			</div>
-
-			{badge && <div class='badge badge-secondary my-1'>{badge}</div>}
-			{
-				updatedDate && (
-					<div>
-						{' '}
-						Last updated on <time>{updatedDate}</time>{' '}
-					</div>
-				)
-			}
 			<div class='divider my-2'></div>
 			<slot />
 		</article>

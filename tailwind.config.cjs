@@ -64,6 +64,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		require('@tailwindcss/line-clamp'),
 		require('flowbite-typography'),
 		require('flowbite/plugin')
 	]

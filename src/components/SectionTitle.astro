@@ -1,7 +1,7 @@
 ---
-const { title, id } = Astro.props
+const { id, className } = Astro.props
 ---
 
-<h2 class='mb-16 text-3xl font-bold text-primary' id={id}>
-	{title}
+<h2 class={`mb-16 text-3xl font-bold text-primary ${className}`} id={id}>
+	<slot />
 </h2>

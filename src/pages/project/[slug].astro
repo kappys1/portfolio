@@ -1,5 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
+import ProjectLayout from 'src/layouts/ProjectLayout.astro'
 import type { ProjectSchema } from '../../content/config'
 import PostLayout from '../../layouts/PostLayout.astro'
 
@@ -20,14 +21,13 @@ const project: ProjectSchema = entry.data
 const { Content } = await entry.render()
 ---
 
-<PostLayout
+<ProjectLayout
 	title={project.title}
 	description={project.description}
-	pubDate={project.pubDate}
+	url={project.url}
+	type={project.type}
 	heroImage={project.heroImage}
-	updatedDate={project.updatedDate}
-	badge={project.badge}
 	technologies={project.technologies}
 >
 	<Content />
-</PostLayout>
+</ProjectLayout>

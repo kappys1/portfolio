@@ -12,10 +12,10 @@ const blogSchema = z.object({
 const projectSchema = z.object({
 	title: z.string(),
 	description: z.string(),
-	pubDate: z.coerce.date(),
-	updatedDate: z.string().optional(),
 	heroImage: z.string().optional(),
-	badge: z.string().optional(),
+	hashtags: z.array(z.string()).optional(),
+	url: z.string().url().optional(),
+	type: z.enum(['frontend', 'fullstack']),
 	technologies: z
 		.array(z.object({ id: z.string(), name: z.string(), src: z.string() }))
 		.optional()

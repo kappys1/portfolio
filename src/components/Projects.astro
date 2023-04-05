@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
+import ArrowTopRight from './icons/ArrowTopRight.astro'
 import SectionTitle from './SectionTitle.astro'
 import TechnologyIcon from './TechnologyIcon.astro'
 
@@ -14,7 +15,13 @@ const getPostDate = (date: Date) => {
 ---
 
 <article id='projects' class='order-2 md:-order-1'>
-	<SectionTitle title='Recent Projects' />
+	<a href='/project/'>
+		<SectionTitle className='flex items-center gap-2'>
+			Projects
+			<ArrowTopRight />
+		</SectionTitle>
+	</a>
+
 	<div class='flex flex-col gap-12'>
 		{
 			projects &&
@@ -27,7 +34,7 @@ const getPostDate = (date: Date) => {
 						dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 '
 					>
 						<img
-							class='object-contain w-full rounded-md h-96 aspect-square p-4 md:max-h-48 md:h-full md:w-48 '
+							class='object-contain w-full border-transparent rounded-md h-96 aspect-square p-4 md:max-h-48 md:h-full md:w-48 '
 							src={project.data.heroImage}
 							alt=''
 						/>
