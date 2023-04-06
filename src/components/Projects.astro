@@ -1,17 +1,10 @@
 ---
 import { getCollection } from 'astro:content'
-import dayjs from 'dayjs'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
 import ArrowTopRight from './icons/ArrowTopRight.astro'
+import ProjectListItem from './ProjectListItem.astro'
 import SectionTitle from './SectionTitle.astro'
-import TechnologyIcon from './TechnologyIcon.astro'
 
 const projects = await getCollection('project')
-
-const getPostDate = (date: Date) => {
-	dayjs.extend(localizedFormat)
-	return dayjs(date).format('ll')
-}
 ---
 
 <article id='projects' class='order-2 lg:-order-1'>
@@ -26,37 +19,14 @@ const getPostDate = (date: Date) => {
 		{
 			projects &&
 				projects.map((project) => (
-					<a
+					<ProjectListItem
+						id={project.id}
+						title={project.data.title}
+						description={project.data.description}
+						img={project.data.heroImage || ''}
+						technologies={project.data.technologies || []}
 						href={'/project/' + project.slug}
-						class='flex group flex-col items-center bg-white border rounded-lg transition-all relative
-						 hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.01]
-						md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-72
-						dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 '
-					>
-						<img
-							class='object-contain w-full border-transparent rounded-md h-96 aspect-square p-4 md:max-h-48 md:h-full md:w-48 '
-							src={project.data.heroImage}
-							alt=''
-						/>
-						<div class='flex flex-col justify-between p-4 leading-normal gap-4'>
-							<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-								{project.data.title}
-							</h5>
-							<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-								{project.data.description}
-							</p>
-							<div class='flex gap-5'>
-								{project.data.technologies &&
-									project.data.technologies.map((tech) => (
-										<TechnologyIcon
-											id={`${project.id}-${tech.id}`}
-											src={tech.src}
-											name={tech.name}
-										/>
-									))}
-							</div>
-						</div>
-					</a>
+					/>
 				))
 		}
 	</div>

@@ -1,2 +1,47 @@
 ---
+import TechnologyIcon from './TechnologyIcon.astro'
+interface Props {
+	id: string
+	href: string
+	img: string
+	title: string
+	description: string
+	technologies: {
+		id: string
+		src: string
+		name: string
+	}[]
+}
+const { id, href, img, title, description, technologies } = Astro.props
 ---
+
+<a
+	href={href}
+	class='flex group flex-col items-center bg-white border rounded-lg transition-all relative hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.01] md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-72 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
+>
+	<img
+		class='object-contain w-full border-transparent rounded-md h-96 aspect-square p-4 md:max-h-48 md:h-full md:w-48'
+		src={img}
+		alt=''
+	/>
+	<div class='flex flex-col justify-between p-4 leading-normal gap-2'>
+		<h5 class='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+			{title}
+		</h5>
+		<p class='mb-4 font-normal text-gray-700 dark:text-gray-400'>
+			{description}
+		</p>
+		<div class='flex gap-5'>
+			{
+				technologies &&
+					technologies.map((tech) => (
+						<TechnologyIcon
+							id={`${id}-${tech.id}`}
+							src={tech.src}
+							name={tech.name}
+						/>
+					))
+			}
+		</div>
+	</div>
+</a>

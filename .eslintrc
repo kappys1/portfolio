@@ -32,7 +32,8 @@
 		"no-tabs": "off",
 		"quotes": ["warn", "single"],
 		"jsx-quotes": ["warn", "prefer-single"],
-		"eol-last": "off"
+		"eol-last": "off",
+		"import/no-absolute-path": "off",
 	},
 	"overrides": [
 		{
