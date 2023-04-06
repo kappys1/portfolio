@@ -14,7 +14,7 @@ const { page } = Astro.props
 
 <BaseLayout title='Projects'>
 	<section class='bg-white dark:bg-gray-900 antialiased'>
-		<div class='max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24'>
+		<div class='max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16'>
 			<div class='max-w-2xl mx-auto text-center'>
 				<h2
 					class='text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white'
@@ -24,7 +24,7 @@ const { page } = Astro.props
 				<p
 					class='mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400'
 				>
-					Crafted with skill and care to help our clients grow their business!
+					Crafted with skill and care to help my clients grow their business!
 				</p>
 			</div>
 			<div
@@ -35,7 +35,7 @@ const { page } = Astro.props
 						<div class='space-y-5 p-4'>
 							<a href={'/project/' + project.slug} role='img'>
 								<img
-									class='object-cover w-full rounded-md h-96 aspect-video items-center shadow-md backdrop-blur-sm mb-4
+									class='object-cover w-full rounded-md h-96 aspect-video items-center mb-4 drop-shadow-xl border
 								md:max-h-48 md:h-full'
 									src={project.data.heroImage}
 									alt=''
