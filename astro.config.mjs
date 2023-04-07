@@ -1,10 +1,13 @@
-import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
-import preact from '@astrojs/preact'
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import preact from '@astrojs/preact';
+import mdx from '@astrojs/mdx';
 
-import mdx from '@astrojs/mdx'
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), preact(), mdx()]
-})
+  integrations: [tailwind(), preact(), mdx()],
+  output: "server",
+  adapter: vercel()
+});

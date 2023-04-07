@@ -13,6 +13,7 @@
     "@astrojs/mdx": "^0.18.2",
     "@astrojs/preact": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
+    "@astrojs/vercel": "^3.2.2",
     "@tailwindcss/line-clamp": "^0.4.4",
     "astro": "^2.2.0",
     "dayjs": "^1.11.7",
