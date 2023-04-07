@@ -3,6 +3,8 @@ import { CollectionEntry, getCollection } from 'astro:content'
 import ProjectLayout from 'src/layouts/ProjectLayout.astro'
 import type { ProjectSchema } from '../../content/config'
 
+export const prerender = true
+
 export async function getStaticPaths() {
 	const postEntries = await getCollection('project')
 	return postEntries.map((entry) => ({

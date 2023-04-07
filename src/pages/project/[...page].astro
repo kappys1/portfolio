@@ -4,8 +4,11 @@ import { getCollection } from 'astro:content'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
 
+export const prerender = true
+
 export async function getStaticPaths({ paginate }) {
 	const project = await getCollection('project')
+	console.log(project)
 	return paginate(project, { pageSize: 10 })
 }
 
