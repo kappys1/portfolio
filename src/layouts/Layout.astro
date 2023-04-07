@@ -20,6 +20,10 @@ const {
 <html lang='en'>
 	<head>
 		<BaseHead title={title} description={description} image={image} />
+		<script
+			async
+			src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js'
+		></script>
 	</head>
 	<body>
 		<Header />
@@ -28,9 +32,7 @@ const {
 		>
 			<slot />
 		</main>
-		<script type='module' async>
-			import '../../../node_modules/three/build/three.min.js'
-		</script>
+
 		<script
 			is:inline
 			src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js'
