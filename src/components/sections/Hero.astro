@@ -65,9 +65,11 @@ import Background from './Background.astro'
 		</div>
 
 		<img
-			src='me.png'
+			src='https://res.cloudinary.com/kappys/image/upload/e_blur:2000,f_auto,q_auto:eco/v1681068093/portfolio/me.png'
+			data-src='https://res.cloudinary.com/kappys/image/upload/f_auto,q_auto/v1681068093/portfolio/me.png'
+			data-srcset='https://res.cloudinary.com/kappys/image/upload/f_auto,q_auto/v1681068093/portfolio/me.png 2x, https://res.cloudinary.com/kappys/image/upload/f_auto,q_auto/v1681068093/portfolio/me.png 1x'
 			alt='Mi imagen de perfil'
-			class='max-w-[350px] self-center h-3/4 border-1 rounded-lg object-contain justify-center -bottom-32 right-0 sm:max-w-[480px] md:mt-16 lg:w-[550px] md:absolute xl:bottom-0'
+			class='lazy max-w-[350px] self-center h-3/4 border-1 rounded-lg object-contain justify-center -bottom-32 right-0 sm:max-w-[480px] md:mt-16 lg:w-[550px] md:absolute xl:bottom-0'
 		/>
 	</div>
 	<ChevronDown
