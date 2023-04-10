@@ -31,7 +31,7 @@ const { title, description, url, heroImage, technologies } = Astro.props
 					href={url}
 					class='flex justify-center items-center no-underline text-inherit gap-4'
 				>
-					{title} <ArrowTopRight /></a
+					{title} {url && <ArrowTopRight />}</a
 				>
 			</h1>
 
