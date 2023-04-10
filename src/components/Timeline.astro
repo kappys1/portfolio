@@ -77,19 +77,20 @@ const timeline = [
 					d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'></path></svg
 			><span class=''>Jobs</span>
 		</h2>
-		<ol class='flow-root'>
-			<ul role='list' class='divide-y divide-gray-200 dark:divide-gray-700'>
-				{
-					timeline.map((time) => (
-						<JobItem
-							image={time.image}
-							company={time.company}
-							job={time.job}
-							date={time.date}
-						/>
-					))
-				}
-			</ul>
+		<ol
+			role='list'
+			class='flow-root divide-y divide-gray-200 dark:divide-gray-700'
+		>
+			{
+				timeline.map((time) => (
+					<JobItem
+						image={time.image}
+						company={time.company}
+						job={time.job}
+						date={time.date}
+					/>
+				))
+			}
 		</ol>
 
 		<div class='flex gap-4'>
