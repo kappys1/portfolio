@@ -1,7 +1,7 @@
 ---
 title: "Feet Solutions"
 description: "Feet Solutions is a company that provides orthopedic insoles. I help them to implement new functionalities."
-heroImage: "v1681153966/portfolio/feetsolution/home.png"
+heroImage: "v1681153966/portfolio/feetsolution/home_ugapuy.avif"
 url: "https://feetsolutions.es"
 type: "fullstack"
 technologies: [
