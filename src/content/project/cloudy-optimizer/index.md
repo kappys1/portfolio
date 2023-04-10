@@ -1,7 +1,7 @@
 ---
 title: "Cloudy optimizer"
 description: "Free tool that helps you to analyze your website and optimize your images with cloudinary."
-heroImage: "/project/cloudy-optimizer/home.avif"
+heroImage: "v1681153984/portfolio/cloudy-optimizer/home.png"
 url: "https://cloudy-optimizer.vercel.app/"
 type: "frontend"
 technologies: [

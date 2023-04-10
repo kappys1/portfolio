@@ -3,12 +3,12 @@ import BaseLayout from '../../layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
+import CloudinaryImage from 'src/components/CloudinaryImage.astro'
 
 export const prerender = true
 
 export async function getStaticPaths({ paginate }) {
 	const project = await getCollection('project')
-	console.log(project)
 	return paginate(project, { pageSize: 10 })
 }
 
@@ -37,11 +37,10 @@ const { page } = Astro.props
 					page.data.map((project) => (
 						<div class='space-y-5 p-4'>
 							<a href={'/project/' + project.slug} role='img'>
-								<img
-									class='object-cover w-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border
-								md:max-h-48 md:h-full'
+								<CloudinaryImage
+									className='object-cover w-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
 									src={project.data.heroImage}
-									alt=''
+									alt={''}
 								/>
 							</a>
 							<span class='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300 capitalize'>

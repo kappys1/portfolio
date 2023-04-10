@@ -1,7 +1,7 @@
 ---
 title: "Munoa"
 description: "Munoa is an interactive application for their palace in San Sebastian. It explain you their history."
-heroImage: "/project/munoa/home.avif"
+heroImage: "v1681153966/portfolio/munoa/home.png"
 type: "fullstack"
 technologies: [
 	{id: "html5", name: "HTML 5", src: "/icons/html5.svg" },  

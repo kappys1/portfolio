@@ -1,0 +1,17 @@
+---
+export interface Props {
+	src: string
+	className?: string
+	alt?: string
+	user?: string
+}
+const { src, className, alt, user = 'kappys' } = Astro.props
+---
+
+<img
+	src={`https://res.cloudinary.com/${user}/image/upload/e_blur:2000,f_auto,q_auto:eco/${src}`}
+	data-src={`https://res.cloudinary.com/${user}/image/upload/f_auto,q_auto/${src}`}
+	data-srcset={`https://res.cloudinary.com/${user}/image/upload/f_auto,q_auto/${src} 2x, https://res.cloudinary.com/${user}/image/upload/f_auto,q_auto/${src} 1x`}
+	alt={alt}
+	class={`lazy ${className}`}
+/>

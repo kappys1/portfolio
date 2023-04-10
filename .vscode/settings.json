@@ -16,7 +16,12 @@
 	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
-	"cSpell.words": ["flowbite", "preact", "vanta"],
+	"cSpell.words": [
+		"feetsolution",
+		"flowbite",
+		"preact",
+		"vanta"
+	],
 	"files.associations": {
 		"*.mdx": "markdown"
 	}
