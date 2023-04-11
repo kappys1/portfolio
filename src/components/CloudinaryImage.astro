@@ -4,14 +4,23 @@ export interface Props {
 	className?: string
 	alt?: string
 	user?: string
+	transformation?: string
 }
-const { src, className, alt, user = 'kappys' } = Astro.props
+const {
+	src,
+	className,
+	alt,
+	user = 'kappys',
+	transformation = ''
+} = Astro.props
+
+const transformImage = transformation ? `${transformation},` : ''
 ---
 
 <img
 	src={`https://res.cloudinary.com/${user}/image/upload/e_blur:2000,f_auto,q_auto:eco/${src}`}
-	data-src={`https://res.cloudinary.com/${user}/image/upload/f_auto,q_auto/${src}`}
-	data-srcset={`https://res.cloudinary.com/${user}/image/upload/f_auto,q_auto/${src} 2x, https://res.cloudinary.com/${user}/image/upload/f_auto,q_auto/${src} 1x`}
+	data-src={`https://res.cloudinary.com/${user}/image/upload/${transformImage}f_auto,q_auto/${src}`}
+	data-srcset={`https://res.cloudinary.com/${user}/image/upload/${transformImage}f_auto,q_auto/${src} 2x, https://res.cloudinary.com/${user}/image/upload/${transformImage}f_auto,q_auto/${src} 1x`}
 	alt={alt}
 	class={`lazy ${className}`}
 />
