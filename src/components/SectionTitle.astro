@@ -2,6 +2,9 @@
 const { id, className } = Astro.props
 ---
 
-<h2 class={`mb-16 text-3xl font-bold text-primary ${className}`} id={id}>
+<h2
+	class={`mb-16 text-3xl font-bold text-primary dark:text-gray-200 dark:hover:text-gray-100 ${className}`}
+	id={id}
+>
 	<slot />
 </h2>

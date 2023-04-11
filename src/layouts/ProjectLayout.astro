@@ -48,7 +48,9 @@ const { title, description, url, heroImage, technologies } = Astro.props
 				}
 			</div>
 			<div class='divider my-2'></div>
-			<slot />
+			<div class='dark:text-gray-400'>
+				<slot />
+			</div>
 		</article>
 	</section>
 </Layout>

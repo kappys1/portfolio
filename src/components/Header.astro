@@ -1,4 +1,6 @@
 ---
+import ThemeSwitcher from './ThemeSwitcher.astro'
+
 const menu = [
 	{
 		name: 'Home',
@@ -22,12 +24,15 @@ const deactiveClass =
 
 <header class='sticky top-0 z-50'>
 	<nav
-		class='bg-white bg-opacity-90 border-gray-400 px-4 sm:px-6 py-2.5 dark:bg-gray-800'
+		class='flex bg-white bg-opacity-90 border-gray-400 px-4 sm:px-6 py-2.5 dark:bg-gray-900 dark:bg-opacity-70'
 	>
 		<div
-			class='flex flex-wrap justify-end sm:justify-center items-center mx-auto max-w-screen-xl'
+			class='flex flex-wrap justify-end sm:justify-center items-center mx-auto max-w-screen-xl w-full relative'
 		>
-			<div class='flex items-center sm:order-2'>
+			<section
+				class='flex items-center sm:order-2 sm:absolute sm:right-0 sm:top-0'
+			>
+				<ThemeSwitcher />
 				<button
 					data-collapse-toggle='mobile-menu-2'
 					type='button'
@@ -57,9 +62,9 @@ const deactiveClass =
 							clip-rule='evenodd'></path></svg
 					>
 				</button>
-			</div>
-			<div
-				class='hidden justify-between items-center w-full sm:flex sm:w-auto sm:order-1 sm:px-3 sm:py-2 sm:text-sm sm:font-medium sm:transition sm:border sm:rounded-full sm:border-zinc-900/10 sm:bg-white/50 sm:text-zinc-700 sm:backdrop-blur-sm sm:hover:text-zinc-900 sm:dark:border-white/10 sm:dark:bg-zinc-900/20 sm:dark:text-zinc-400 sm:dark:backdrop-blur sm:dark:hover:text-white'
+			</section>
+			<section
+				class='hidden justify-between items-center w-full sm:flex sm:w-auto sm:order-1 sm:px-3 sm:py-2 sm:text-sm sm:font-medium sm:transition sm:border sm:rounded-full sm:border-gray-900/10 sm:bg-white/50 sm:text-gray-700 sm:backdrop-blur-sm sm:hover:text-gray-900 sm:dark:border-white/10 sm:dark:bg-gray-900/20 sm:dark:text-gray-400 sm:dark:backdrop-blur sm:dark:hover:text-white'
 				id='mobile-menu-2'
 			>
 				<ul
@@ -82,7 +87,8 @@ const deactiveClass =
 						})
 					}
 				</ul>
-			</div>
+			</section>
 		</div>
+		<section></section>
 	</nav>
 </header>

@@ -7,7 +7,8 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
-				'button-light': '0 0 #0000, 0 0 #0000, inset 0 1px 0 0 #fff, 0 0 0 1px rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.08), 0 2px 2px 0 rgba(0,0,0,.04), 0 3px 3px 0 rgba(0,0,0,.02), 0 4px 4px 0 rgba(0,0,0,.01)'
+				'button-light': '0 0 #0000, 0 0 #0000, inset 0 1px 0 0 #fff, 0 0 0 1px rgba(0,0,0,.06), 0 1px 0 0 rgba(0,0,0,.08), 0 2px 2px 0 rgba(0,0,0,.04), 0 3px 3px 0 rgba(0,0,0,.02), 0 4px 4px 0 rgba(0,0,0,.01)',
+				'button-dark': '0 0 #0000, 0 0 #0000, 0 -1px 0 0 hsla(0,0%,100%,.04), 0 0 0 1px hsla(0,0%,100%,.12), 0 0 1px 0 rgba(0,0,0,.04), 0 2px 2px 0 rgba(0,0,0,.04), 0 4px 2px 0 rgba(0,0,0,.04), 0 6px 3px 0 rgba(0,0,0,.04)'
 			},
 			colors: {
 				primary: {

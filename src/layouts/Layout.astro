@@ -29,8 +29,20 @@ const {
 			is:inline
 			src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js'
 		></script>
+		<script is:inline>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (
+				localStorage.getItem('color-theme') === 'dark' ||
+				(!('color-theme' in localStorage) &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		</script>
 	</head>
-	<body>
+	<body class='dark:bg-gray-900'>
 		<Header />
 		<main
 			class='flex-1 relative px-6 flex flex-col justify-between m-auto xl:gap-x-24 2xl:w-[1546px] mt-5 xl:mt-0'
