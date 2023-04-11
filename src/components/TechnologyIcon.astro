@@ -1,5 +1,11 @@
 ---
-const { src, name, id } = Astro.props
+export interface Props {
+	src: string
+	name: string
+	id: string
+	className?: string
+}
+const { src, name, id, className = '' } = Astro.props
 ---
 
 <div>
@@ -7,7 +13,7 @@ const { src, name, id } = Astro.props
 		data-tooltip-target={id}
 		src={src}
 		alt={name}
-		class='md:max-h-8 h-12 object-contain max-h-12 max-w-[36px] w-full'
+		class={`md:max-h-8 h-12 object-contain max-h-12 max-w-[36px] w-full ${className}`}
 	/>
 	<div
 		id={`${id}`}
