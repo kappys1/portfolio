@@ -3,20 +3,25 @@ export interface Props {
 	src: string
 	name: string
 	id: string
+	anchorId: string
 	className?: string
 }
-const { src, name, id, className = '' } = Astro.props
+const { src, name, id, className = '', anchorId } = Astro.props
+
+const technologyInvertColor = ['next']
 ---
 
 <div>
 	<img
-		data-tooltip-target={id}
+		data-tooltip-target={anchorId}
 		src={src}
 		alt={name}
-		class={`md:max-h-8 h-12 object-contain max-h-12 max-w-[36px] w-full ${className}`}
+		class={`md:max-h-8 h-12 object-contain max-h-12 max-w-[36px] w-full ${className} ${
+			technologyInvertColor.includes(id) ? 'invert' : ''
+		}`}
 	/>
 	<div
-		id={`${id}`}
+		id={`${anchorId}`}
 		role='tooltip'
 		class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700'
 	>

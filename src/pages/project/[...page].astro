@@ -58,7 +58,8 @@ const { page } = Astro.props
 								{project.data.technologies &&
 									project.data.technologies.map((tech) => (
 										<TechnologyIcon
-											id={`${project.id}-${tech.id}`}
+											anchorId={`${project.id}-${tech.id}`}
+											id={`${tech.id}`}
 											src={tech.src}
 											name={tech.name}
 											className={'max-w-[26px]'}
