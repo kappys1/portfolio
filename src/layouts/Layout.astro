@@ -2,6 +2,7 @@
 import BaseHead from 'src/components/BaseHead.astro'
 import Header from 'src/components/Header.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+import { inject } from '@vercel/analytics'
 
 export interface Props {
 	title?: string
@@ -14,6 +15,8 @@ const {
 	title = SITE_TITLE,
 	description = SITE_DESCRIPTION
 } = Astro.props
+
+inject()
 ---
 
 <!DOCTYPE html>

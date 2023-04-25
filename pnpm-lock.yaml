@@ -8,6 +8,7 @@ specifiers:
   '@tailwindcss/line-clamp': ^0.4.4
   '@typescript-eslint/eslint-plugin': ^5.56.0
   '@typescript-eslint/parser': ^5.56.0
+  '@vercel/analytics': ^1.0.0
   astro: ^2.2.0
   dayjs: ^1.11.7
   eslint: ^8.36.0
@@ -29,6 +30,7 @@ dependencies:
   '@astrojs/tailwind': 3.1.1_sotu42lvtvpmifn366y7sz24fi
   '@astrojs/vercel': 3.2.2_astro@2.2.0
   '@tailwindcss/line-clamp': 0.4.4_tailwindcss@3.2.7
+  '@vercel/analytics': 1.0.0
   astro: 2.2.0
   dayjs: 1.11.7
   eslint-config-prettier: 8.8.0_eslint@8.36.0
@@ -1148,6 +1150,12 @@ packages:
 
   /@vercel/analytics/0.1.11:
     resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dev: false
+
+  /@vercel/analytics/1.0.0:
+    resolution: {integrity: sha512-RQmj7pv82JwGDHrnKeRc6TtSw2U7rWNubc2IH0ernTzWTj02yr9zvIYiYJeztsBzrJtWv7m8Nz6vxxb+cdEtJw==}
     peerDependencies:
       react: ^16.8||^17||^18
     dev: false
