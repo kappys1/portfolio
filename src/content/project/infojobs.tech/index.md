@@ -1,7 +1,7 @@
 ---
 title: "Infojobs.tech"
 description: "Leading job search portal for the technology sector"
-heroImage: "v1686577177/portfolio/infojobs.dev/home.png"
+heroImage: "v1/portfolio/projects/infojobstech"
 url: "https://www.infojobs.tech/"
 type: "fullstack"
 technologies: [
@@ -11,7 +11,6 @@ technologies: [
 	{id: "next", name: "Next js", src: "/icons/nextjs.svg" }
 ]
 ---
-
 
 [Github]()
 

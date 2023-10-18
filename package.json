@@ -16,7 +16,7 @@
     "@astrojs/vercel": "^3.2.2",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@vercel/analytics": "^1.0.0",
-    "astro": "^2.2.0",
+    "astro": "^3.3.2",
     "dayjs": "^1.11.7",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",

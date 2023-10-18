@@ -1,7 +1,7 @@
 ---
 title: "Cloudy optimizer"
 description: "Free tool that helps you to analyze your website and optimize your images with cloudinary."
-heroImage: "v1681153984/portfolio/cloudy-optimizer/home.png"
+heroImage: "v1/portfolio/projects/cloudyoptimizer"
 url: "https://cloudy-optimizer.vercel.app/"
 type: "frontend"
 technologies: [
@@ -11,7 +11,6 @@ technologies: [
 	{id: "next", name: "Next js", src: "/icons/nextjs.svg" }
 ]
 ---
-
 
 [Github](https://github.com/kappys1/cloudy-optimizer)
 

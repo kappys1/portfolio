@@ -1,10 +1,10 @@
 ---
 import Layout from './Layout.astro'
 
-import type { ProjectSchema } from 'src/content/config'
+import CloudinaryImage from 'src/components/CloudinaryImage.astro'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
-import CloudinaryImage from 'src/components/CloudinaryImage.astro'
+import type { ProjectSchema } from 'src/content/config'
 
 export type Props = ProjectSchema
 const { title, description, url, heroImage, technologies } = Astro.props
@@ -18,7 +18,7 @@ const { title, description, url, heroImage, technologies } = Astro.props
 			{
 				heroImage && (
 					<CloudinaryImage
-						className='w-full mb-6 rounded-md aspect-video object-contain drop-shadow-2xl'
+						className='w-full mb-6 rounded-md aspect-video object-cover drop-shadow-2xl'
 						src={heroImage}
 						alt={title}
 					/>

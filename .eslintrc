@@ -18,6 +18,7 @@
 	},
 	"rules": {
 		"indent": ["warn", "tab"],
+		"semi": "off",
 		"no-unused-vars": "warn",
 		"@typescript-eslint/no-unused-vars": [
 			"warn",
@@ -33,7 +34,7 @@
 		"quotes": ["warn", "single"],
 		"jsx-quotes": ["warn", "prefer-single"],
 		"eol-last": "off",
-		"import/no-absolute-path": "off",
+		"import/no-absolute-path": "off"
 	},
 	"overrides": [
 		{
