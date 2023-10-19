@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
 import meImage2 from '../../assets/me2.jpg';
 ---
 
@@ -35,10 +35,10 @@ import meImage2 from '../../assets/me2.jpg';
 		</p>
 	</article>
 	<article class='align-middle w-full max-w-[500px] h-[650px]'>
-		<Picture
+		<Image
 			src={meImage2}
 			loading={'lazy'}
-			formats={['avif', 'webp', 'jpeg']}
+			width={meImage2.width / 2} densities={[1.5, 2]}
 			alt='My photo for about section'
 			class='w-full drop-shadow-2xl rounded-lg object-cover dark:drop-shadow-green-50 '
 		/>
