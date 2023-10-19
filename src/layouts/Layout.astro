@@ -2,7 +2,7 @@
 import BaseHead from 'src/components/BaseHead.astro'
 import Header from 'src/components/Header.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-
+import { ViewTransitions } from 'astro:transitions';
 export interface Props {
 	title?: string
 	description?: string
@@ -19,6 +19,7 @@ const {
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
+
 		<BaseHead title={title} description={description} image={image} />
 		<script
 			async
@@ -31,16 +32,20 @@ const {
 		></script>
 		<script is:inline>
 			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-			if (
-				localStorage.getItem('color-theme') === 'dark' ||
+			document.addEventListener('astro:after-swap', () => {
+				console.log('astro:after-swap, setting theme', localStorage.getItem('color-theme'))
+				if (
+					localStorage.getItem('color-theme') === 'dark' ||
 				(!('color-theme' in localStorage) &&
 					window.matchMedia('(prefers-color-scheme: dark)').matches)
-			) {
-				document.documentElement.classList.add('dark')
-			} else {
-				document.documentElement.classList.remove('dark')
-			}
+				) {
+					document.documentElement.classList.add('dark')
+				} else {
+					document.documentElement.classList.remove('dark')
+				}
+			});
 		</script>
+		<ViewTransitions />
 	</head>
 	<body class='dark:bg-gray-900'>
 		<Header />
@@ -62,6 +67,5 @@ const {
 			}
 		</style>
 		<script src='../utils/lazy.js'></script>
-		<script defer src='/_vercel/insights/script.js'></script>
 	</body>
 </html>

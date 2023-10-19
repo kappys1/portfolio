@@ -1,12 +1,13 @@
 ---
-import Hero from 'src/components/sections/Hero.astro'
-import Projects from 'src/components/Projects.astro'
-import Timeline from 'src/components/Timeline.astro'
-import Layout from '../layouts/Layout.astro'
+import Projects from 'src/components/Projects.astro';
+import Timeline from 'src/components/Timeline.astro';
+import Hero from 'src/components/sections/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout>
-	<Hero />
+	<Hero transition:animate='slide'/>
 	<section
 		class='grid max-w-xl grid-cols-1 mx-auto gap-y-20 py-12 lg:max-w-none lg:grid-cols-2 md:gap-x-16 xl:gap-x-32'
 	>

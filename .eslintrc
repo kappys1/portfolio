@@ -31,6 +31,7 @@
 		"space-before-function-paren": "off",
 		"no-multiple-empty-lines": "off",
 		"no-tabs": "off",
+		"comma-dangle": "off",
 		"quotes": ["warn", "single"],
 		"jsx-quotes": ["warn", "prefer-single"],
 		"eol-last": "off",

@@ -1,7 +1,6 @@
 ---
-import CloudinaryImage from './CloudinaryImage.astro';
+import { Picture } from 'astro:assets';
 const { image, company, job, date } = Astro.props
-
 ---
 
 <li class='py-3 sm:py-4 flex items-center space-x-4'>
@@ -10,11 +9,10 @@ const { image, company, job, date } = Astro.props
 	>
 		{
 			image && (
-				<CloudinaryImage
-					className='w-8 h-8 object-contain rounded-full'
+				<Picture class='w-8 h-8 object-contain rounded-full'
 					src={image}
-					alt={`${company} logo`}
-				/>
+					formats={['avif', 'webp']}
+					alt={`${company} logo`}/>
 			)
 		}
 	</div>

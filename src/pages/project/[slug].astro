@@ -1,7 +1,6 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content'
+import { getCollection, type CollectionEntry } from 'astro:content'
 import ProjectLayout from 'src/layouts/ProjectLayout.astro'
-import type { ProjectSchema } from '../../content/config'
 
 export const prerender = true
 
@@ -18,7 +17,7 @@ interface Props {
 }
 
 const { entry } = Astro.props
-const project: ProjectSchema = entry.data
+const project = entry.data
 const { Content } = await entry.render()
 ---
 

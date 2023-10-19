@@ -1,6 +1,6 @@
 ---
+import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import CloudinaryImage from 'src/components/CloudinaryImage.astro'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
 import BaseLayout from '../../layouts/Layout.astro'
@@ -42,8 +42,9 @@ const { page } = Astro.props
 					page.data.map((project) => (
 						<div class='space-y-5 p-4'>
 							<a href={'/project/' + project.slug} role='img'>
-								<CloudinaryImage
-									className='object-cover w-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
+								<Image
+
+									class='object-cover w-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
 									src={project.data.heroImage}
 									alt={`Project image for ${project.data.title}`}
 								/>

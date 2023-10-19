@@ -1,7 +1,7 @@
 ---
 title: "Infojobs.tech"
 description: "Leading job search portal for the technology sector"
-heroImage: "v1/portfolio/projects/infojobstech"
+heroImage: "./techInfojobs.webp"
 url: "https://www.infojobs.tech/"
 type: "fullstack"
 technologies: [
