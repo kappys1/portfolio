@@ -1,15 +1,16 @@
 ---
-import { getCollection } from 'astro:content'
-import ProjectListItem from './ProjectListItem.astro'
-import SectionTitle from './SectionTitle.astro'
-import ArrowTopRight from './icons/ArrowTopRight.astro'
+import { getCollection } from 'astro:content';
+
+import ProjectListItem from './ProjectListItem.astro';
+import SectionTitle from './SectionTitle.astro';
+import ArrowTopRight from './icons/ArrowTopRight.astro';
 
 const projects = await getCollection('project')
 ---
 
 <article id='projects' class='order-2 lg:-order-1'>
 	<a href='/project/'>
-		<SectionTitle className='flex items-center gap-2'>
+		<SectionTitle className='flex items-center gap-2'  >
 			Projects
 			<ArrowTopRight />
 		</SectionTitle>
