@@ -1,7 +1,7 @@
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import { useRef, useEffect, useState } from 'preact/hooks'
 
-export function Birds() {
+export function Birds({id}) {
   const myRef = useRef(null)
   const [vantaEffect, setVantaEffect] = useState()
 
@@ -29,7 +29,7 @@ export function Birds() {
     }
   }, [vantaEffect])
   return (
-    <div ref={myRef} className='w-full h-full max-h-screen'>
+    <div id={id} ref={myRef} className='w-full h-full max-h-screen' transition:persist>
       {' '}
     </div>
   )

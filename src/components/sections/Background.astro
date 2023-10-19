@@ -1,7 +1,14 @@
 ---
-import { Birds } from '../Birds'
+import { Birds } from '../Birds';
 ---
 
 <div class='absolute inset-0 pointer-events-none -z-10'>
-	<Birds client:load />
+	<Birds client:load id='birds' transition:persist/>
 </div>
+<!-- 
+<script>
+  document.addEventListener('astro:before-swap', () => {
+		console.log('before swap')
+		document.getElementById('birds')?.remove()
+  });
+</script> -->

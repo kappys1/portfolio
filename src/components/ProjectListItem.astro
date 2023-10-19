@@ -10,6 +10,7 @@ const { id, href, img, title, description, technologies } = Astro.props
 	class='flex group flex-col items-center bg-white border rounded-lg transition-all relative hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.02] md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-72 dark:border-gray-700 dark:bg-gray-800 dark:md:border-none dark:md:bg-transparent dark:hover:bg-gray-800'
 >
 	<Image
+		transition:persist='project-image'
 		class='object-cover w-full border-transparent rounded-t-lg aspect-video md:border md:rounded-md md:max-w-[250px] md:m-4'
 		src={img}
 		alt={'project image for ' + title} />
