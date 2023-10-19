@@ -78,16 +78,20 @@ import Background from './Background.astro'
 		/>
 	</div>
 	<ChevronDown
+		transition:persist
 		id='chevron-down'
 		className='self-center mt-4 hover:scale-110 cursor-pointer transition-transform duration-300 ease-in-out md:pb-16'
 	/>
 </section>
 
-<script>
-	const handleGoToTimeline = () => {
-		const timeline = document.querySelector('#timeline')
-		timeline && timeline.scrollIntoView({ behavior: 'smooth' })
-	}
-	const button = document.querySelector('#chevron-down')
-	button && button.addEventListener('click', handleGoToTimeline)
+<script >
+	document.addEventListener('astro:page-load', () => {
+		const handleGoToTimeline = () => {
+			const timeline = document.querySelector('#timeline')
+			timeline && timeline.scrollIntoView({ behavior: 'smooth' })
+		}
+		const button = document.querySelector('#chevron-down')
+		button && button.addEventListener('click', handleGoToTimeline)
+  });
+	
 </script>
