@@ -33,10 +33,9 @@ const {
 		<script is:inline>
 			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
 			document.addEventListener('astro:after-swap', () => {
-				console.log('astro:after-swap, setting theme', localStorage.getItem('color-theme'))
 				if (
-					localStorage.getItem('color-theme') === 'dark' ||
-				(!('color-theme' in localStorage) &&
+					localStorage.getItem('theme') === 'dark' ||
+				(!('theme' in localStorage) &&
 					window.matchMedia('(prefers-color-scheme: dark)').matches)
 				) {
 					document.documentElement.classList.add('dark')
