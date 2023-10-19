@@ -43,6 +43,7 @@ const { page } = Astro.props
 						<div class='space-y-5 p-4'>
 							<a href={'/project/' + project.slug} role='img'>
 								<Image
+									width={project.data.heroImage.width / 2} densities={[1.5, 2]}
 									transition:name={`project-image-${project.slug}`}
 									class='object-cover w-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
 									src={project.data.heroImage}
