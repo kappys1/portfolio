@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content'
-import ArrowTopRight from './icons/ArrowTopRight.astro'
 import ProjectListItem from './ProjectListItem.astro'
 import SectionTitle from './SectionTitle.astro'
+import ArrowTopRight from './icons/ArrowTopRight.astro'
 
 const projects = await getCollection('project')
 ---
@@ -20,7 +20,7 @@ const projects = await getCollection('project')
 			projects &&
 				projects.map((project) => (
 					<ProjectListItem
-						id={project.id}
+						id={project.slug}
 						title={project.data.title}
 						description={project.data.description}
 						img={project.data.heroImage || ''}

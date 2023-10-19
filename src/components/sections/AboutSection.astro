@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets';
-import meImage2 from '../../assets/me2.avif';
+import { Picture } from 'astro:assets';
+import meImage2 from '../../assets/me2.jpg';
 ---
 
 <section
@@ -35,8 +35,10 @@ import meImage2 from '../../assets/me2.avif';
 		</p>
 	</article>
 	<article class='align-middle w-full max-w-[500px] h-[650px]'>
-		<Image
+		<Picture
 			src={meImage2}
+			loading={'lazy'}
+			formats={['avif', 'webp', 'jpeg']}
 			alt='My photo for about section'
 			class='w-full drop-shadow-2xl rounded-lg object-cover dark:drop-shadow-green-50 '
 		/>
