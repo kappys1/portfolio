@@ -34,11 +34,9 @@ const deactiveClass =
 			>
 				<ThemeSwitcher />
 				<button
-					data-collapse-toggle='mobile-menu-2'
 					type='button'
+					id='hamburger-menu'
 					class='inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
-					aria-controls='mobile-menu-2'
-					aria-expanded='false'
 				>
 					<span class='sr-only'>Open main menu</span>
 					<svg
@@ -64,8 +62,8 @@ const deactiveClass =
 				</button>
 			</section>
 			<section
+				id='menu-section'
 				class='hidden justify-between items-center w-full sm:flex sm:w-auto sm:order-1 sm:px-3 sm:py-2 sm:text-sm sm:font-medium sm:transition sm:border sm:rounded-full sm:border-gray-900/10 sm:bg-white/50 sm:text-gray-700 sm:backdrop-blur-sm sm:hover:text-gray-900 sm:dark:border-white/10 sm:dark:bg-gray-900/20 sm:dark:text-gray-400 sm:dark:backdrop-blur sm:dark:hover:text-white'
-				id='mobile-menu-2'
 			>
 				<ul
 					class='flex flex-col mt-4 font-medium sm:flex-row sm:space-x-8 sm:mt-0'
@@ -92,3 +90,11 @@ const deactiveClass =
 		<section></section>
 	</nav>
 </header>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+		document.querySelector('#hamburger-menu')?.addEventListener('click', () => {
+			document.querySelector('#menu-section')?.classList.toggle('hidden')
+		});
+});
+</script>

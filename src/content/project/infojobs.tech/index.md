@@ -12,7 +12,9 @@ technologies: [
 ]
 ---
 
-[Github]()
+> [InfoJobs](https://www.infojobs.net/) has disabled the API, so the project will no longer work until they enable it again.
+
+[Github](https://github.com/kappys1/tech-infojobs)
 
 [Infojobs.tech](https://www.infojobs.tech/) is a platform inspired by the popular job website Infojobs.com. The main goal is to provide a specialized service for job opportunities in the technology sector, while offering the unique capability to visualize these opportunities on a geographic map. Unlike conventional job search services, this exclusive functionality of Infojobs.tech provides users with a clear and concise visual perspective of employment opportunities in the technology field within their area of interest.
 
