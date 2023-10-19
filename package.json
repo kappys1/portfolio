@@ -25,11 +25,11 @@
     "eslint-plugin-promise": "^6.1.1",
     "flowbite": "^1.6.4",
     "preact": "^10.6.5",
+    "sharp": "^0.32.6",
     "tailwindcss": "^3.0.24",
     "vanta": "^0.5.24"
   },
   "devDependencies": {
-    "@rollup/plugin-dynamic-import-vars": "^2.0.7",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
