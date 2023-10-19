@@ -38,6 +38,7 @@ const { className = '' } = Astro.props;
   	localStorage.theme === 'dark'
   		? document.documentElement.classList.add('dark')
   		: document.documentElement.classList.add('light');
+		document.body.classList.remove('hidden');
   });
 </script>
 <script is:inline>
@@ -61,13 +62,15 @@ const { className = '' } = Astro.props;
 			}
 			return 'light';
 		})();
-
+		
 		if (theme === 'light') {
 			themeToggleDarkIcon.classList.remove('hidden');
 			document.documentElement.classList.remove('dark');
+			 document.body.classList.remove('hidden');
 		} else {
 			themeToggleLightIcon.classList.remove('hidden');
 			document.documentElement.classList.add('dark');
+			document.body.classList.remove('hidden');
 		}
 
 		window.localStorage.setItem('theme', theme);
