@@ -1,28 +1,23 @@
 {
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"astro", // Enable .astro
-		"typescript", // Enable .ts
-		"typescriptreact" // Enable .tsx
-	],
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-		"editor.formatOnSave": true
-	},
-	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"cSpell.words": [
-		"feetsolution",
-		"flowbite",
-		"preact",
-		"vanta"
-	],
-	"files.associations": {
-		"*.mdx": "markdown"
-	}
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true
+  },
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
+  "cSpell.words": ["feetsolution", "flowbite", "preact", "vanta"],
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }

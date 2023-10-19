@@ -6,14 +6,14 @@ import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [mdx(), tailwind(), preact()],
-	output: 'server',
-	adapter: vercel(),
-	vite: {
-		plugins: [
-			// dynamicImportVars({
-			// 	// options
-			// }),
-		],
-	},
+  integrations: [mdx(), tailwind(), preact()],
+  output: 'server',
+  adapter: vercel(),
+  vite: {
+    plugins: [
+      // dynamicImportVars({
+      // 	// options
+      // }),
+    ],
+  },
 })

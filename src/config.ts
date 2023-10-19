@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'Alex Marcos - Web Developer'
 export const SITE_DESCRIPTION =
-	'Personal Website with Project Section, CV Section, Paginated Blog, RSS Feed, SEO Friendly, and more.'
+  'Personal Website with Project Section, CV Section, Paginated Blog, RSS Feed, SEO Friendly, and more.'
