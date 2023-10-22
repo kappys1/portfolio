@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
+import LazyImage from 'src/components/LazyImage.astro'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
 import BaseLayout from '../../layouts/Layout.astro'
@@ -39,13 +39,14 @@ const { page } = Astro.props
 				class='grid grid-cols-1 mt-12 sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3'
 			>
 				{
-					page.data.map((project) => (
+					page.data.map(project => (
 						<div class='space-y-5 p-4'>
 							<a href={'/project/' + project.slug} role='img'>
-								<Image
-									width={project.data.heroImage.width / 2} densities={[1.5, 2]}
-									transition:name={`project-image-${project.slug}`}
-									class='object-cover w-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
+								<LazyImage
+									width={project.data.heroImage.width / 2}
+									densities={[1.5, 2]}
+									transitionName={`project-image-${project.slug}`}
+									className='object-cover w-full h-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
 									src={project.data.heroImage}
 									alt={`Project image for ${project.data.title}`}
 								/>
@@ -59,7 +60,7 @@ const { page } = Astro.props
 							</h3>
 							<div class='flex gap-5'>
 								{project.data.technologies &&
-									project.data.technologies.map((tech) => (
+									project.data.technologies.map(tech => (
 										<TechnologyIcon
 											anchorId={`${project.id}-${tech.id}`}
 											id={`${tech.id}`}

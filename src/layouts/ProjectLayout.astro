@@ -6,7 +6,6 @@ import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
 
 const { id, title, description, url, heroImage, technologies } = Astro.props
-
 ---
 
 <Layout title={title} description={description} image={heroImage}>
@@ -16,12 +15,16 @@ const { id, title, description, url, heroImage, technologies } = Astro.props
 		>
 			{
 				heroImage && (
-					<Image
-						transition:name={`project-image-${id}`}
-						class='w-full mb-6 rounded-md aspect-video object-cover drop-shadow-2xl'
-						src={heroImage}
-						alt={title}
-					/>
+					<>
+						<div class='w-full aspect-video'>
+							<Image
+								transition:name={`project-image-${id}`}
+								class='w-full mb-6 rounded-md aspect-video object-cover drop-shadow-2xl'
+								src={heroImage}
+								alt={title}
+							/>
+						</div>
+					</>
 				)
 			}
 			<h1
@@ -38,7 +41,7 @@ const { id, title, description, url, heroImage, technologies } = Astro.props
 			<div class='flex gap-5'>
 				{
 					technologies &&
-						technologies.map((tech) => (
+						technologies.map(tech => (
 							<TechnologyIcon
 								id={`${tech.id}`}
 								anchorId={`${tech.id}`}

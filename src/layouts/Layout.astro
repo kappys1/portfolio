@@ -2,7 +2,7 @@
 import BaseHead from 'src/components/BaseHead.astro'
 import Header from 'src/components/Header.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions'
 export interface Props {
 	title?: string
 	description?: string
@@ -12,14 +12,13 @@ export interface Props {
 const {
 	image,
 	title = SITE_TITLE,
-	description = SITE_DESCRIPTION
+	description = SITE_DESCRIPTION,
 } = Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang='en'>
 	<head>
-
 		<BaseHead title={title} description={description} image={image} />
 		<script
 			async
@@ -31,18 +30,18 @@ const {
 			src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js'
 		></script>
 		<script is:inline>
-			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-			document.addEventListener('astro:after-swap', () => {
-				if (
-					localStorage.getItem('theme') === 'dark' ||
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		document.addEventListener('astro:after-swap', () => {
+			if (
+				localStorage.getItem('theme') === 'dark' ||
 				(!('theme' in localStorage) &&
 					window.matchMedia('(prefers-color-scheme: dark)').matches)
-				) {
-					document.documentElement.classList.add('dark')
-				} else {
-					document.documentElement.classList.remove('dark')
-				}
-			});
+			) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		})
 		</script>
 		<ViewTransitions />
 	</head>
@@ -53,7 +52,7 @@ const {
 		>
 			<slot />
 		</main>
-
+		<!-- <script src='../utils/lazy.js'></script> -->
 		<style is:global>
 			html {
 				/* font-family: 'Montserrat', system-ui, sans-serif; */
@@ -61,8 +60,15 @@ const {
 				/* background-color: #f6f6f6; */
 			}
 			code {
-				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+				font-family:
+					Menlo,
+					Monaco,
+					Lucida Console,
+					Liberation Mono,
+					DejaVu Sans Mono,
+					Bitstream Vera Sans Mono,
+					Courier New,
+					monospace;
 			}
 		</style>
 	</body>
