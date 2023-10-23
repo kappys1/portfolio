@@ -1,5 +1,5 @@
 ---
-import LazyImage from './LazyImage.astro'
+import { Image } from 'astro:assets'
 import TechnologyIcon from './TechnologyIcon.astro'
 
 const { id, href, img, title, description, technologies } = Astro.props
@@ -9,15 +9,17 @@ const { id, href, img, title, description, technologies } = Astro.props
 	href={href}
 	class='flex group flex-col items-center bg-white border rounded-lg transition-all relative hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.02] md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-72 dark:border-gray-700 dark:bg-gray-800 dark:md:border-none dark:md:bg-transparent dark:hover:bg-gray-800'
 >
-	<LazyImage
-		transitionName={`project-image-${id}`}
-		className='object-cover w-full border-transparent rounded-t-lg aspect-video h-auto md:border md:rounded-md md:max-w-[250px] md:m-4'
-		src={img}
-		id={id}
-		width={img.width / 2}
-		densities={[1.5, 2]}
-		alt={'project image for ' + title}
-	/>
+	<div class='w-full aspect-video md:max-w-[250px] md:m-4'>
+		<Image
+			transition:name={`project-image-${id}`}
+			class='object-cover w-full border-transparent rounded-t-lg aspect-video h-auto md:border md:rounded-md'
+			src={img}
+			id={id}
+			width={img.width / 2}
+			densities={[1.5, 2]}
+			alt={'project image for ' + title}
+		/>
+	</div>
 
 	<div class='flex flex-col justify-between p-4 leading-normal gap-3'>
 		<h1 class='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>

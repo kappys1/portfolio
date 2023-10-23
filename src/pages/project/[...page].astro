@@ -1,6 +1,6 @@
 ---
+import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import LazyImage from 'src/components/LazyImage.astro'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
 import BaseLayout from '../../layouts/Layout.astro'
@@ -41,16 +41,19 @@ const { page } = Astro.props
 				{
 					page.data.map(project => (
 						<div class='space-y-5 p-4'>
-							<a href={'/project/' + project.slug} role='img'>
-								<LazyImage
-									width={project.data.heroImage.width / 2}
-									densities={[1.5, 2]}
-									transitionName={`project-image-${project.slug}`}
-									className='object-cover w-full h-full rounded-md aspect-video items-center mb-4 drop-shadow-xl border md:max-h-48 md:h-full'
-									src={project.data.heroImage}
-									alt={`Project image for ${project.data.title}`}
-								/>
-							</a>
+							<div class='w-full aspect-video border mb-4 rounded-md drop-shadow-xl md:max-h-48 md:h-full'>
+								<a href={'/project/' + project.slug} role='img'>
+									<Image
+										width={project.data.heroImage.width / 2}
+										densities={[1.5, 2]}
+										transition:name={`project-image-${project.slug}`}
+										class='object-cover w-full h-full rounded-md  mb-4'
+										src={project.data.heroImage}
+										alt={`Project image for ${project.data.title}`}
+									/>
+								</a>
+							</div>
+
 							<span class='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300 capitalize'>
 								{project.data.type}
 							</span>
