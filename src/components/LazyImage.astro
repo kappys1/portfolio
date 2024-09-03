@@ -1,16 +1,13 @@
 ---
-import { Picture } from 'astro:assets'
 
 const { src, width, densities, alt, className, transitionName, formats } = Astro.props
 ---
 
 <div class={`skeleton-container relative ${className}`}>
-	<Picture
+	<img
 		transition:name={transitionName}
 		src={src}
-		formats={formats}
 		width={width}
-		densities={densities}
 		alt={alt}
 		class={'absolute top-0 left-0 w-full h-full object-cover rounded m-0 z-20'}
 	/>
