@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
@@ -43,12 +42,11 @@ const { page } = Astro.props
 						<div class='space-y-5 p-4'>
 							<div class='w-full aspect-video border mb-4 rounded-md drop-shadow-xl md:max-h-48 md:h-full'>
 								<a href={'/project/' + project.slug} role='img' accesskey=''>
-									<Image
+									<img
 										width={project.data.heroImage.width / 2}
-										densities={[1.5, 2]}
 										transition:name={`project-image-${project.slug}`}
 										class='object-cover w-full h-full rounded-md  mb-4'
-										src={project.data.heroImage}
+										src={project.data.heroImage.src}
 										alt={`Project image for ${project.data.title}`}
 									/>
 								</a>

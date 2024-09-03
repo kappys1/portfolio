@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import TechnologyIcon from './TechnologyIcon.astro'
 
 const { id, href, img, title, description, technologies } = Astro.props
@@ -10,14 +9,13 @@ const { id, href, img, title, description, technologies } = Astro.props
 	class='flex group flex-col items-center bg-white border rounded-lg transition-all relative hover:shadow-md hover:backdrop-blur-sm hover:scale-[1.02] md:hover:border-gray-200 md:border-transparent md:flex-row md:max-w-2xl md:max-h-72 dark:border-gray-700 dark:bg-gray-800 dark:md:border-none dark:md:bg-transparent dark:hover:bg-gray-800'
 >
 	<div class='w-full aspect-video md:max-w-[250px] md:m-4'>
-		<Image
+		<img
 			transition:name={`project-image-${id}`}
 			transition:persist
 			class='object-cover w-full border-transparent rounded-t-lg aspect-video h-auto md:border md:rounded-md'
-			src={img}
+			src={img.src}
 			id={id}
 			width={img.width / 2}
-			densities={[1.5, 2]}
 			alt={'project image for ' + title}
 		/>
 	</div>

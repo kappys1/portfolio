@@ -1,5 +1,4 @@
 ---
-import { Picture } from 'astro:assets';
 const { image, company, job, date } = Astro.props
 ---
 
@@ -9,9 +8,8 @@ const { image, company, job, date } = Astro.props
 	>
 		{
 			image && (
-				<Picture class='w-8 h-8 object-contain rounded-full'
+				<img class='w-8 h-8 object-contain rounded-full'
 					src={image}
-					formats={['avif', 'webp']}
 					alt={`${company} logo`}/>
 			)
 		}

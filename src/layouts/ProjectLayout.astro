@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets'
 import Layout from './Layout.astro'
 
 import TechnologyIcon from 'src/components/TechnologyIcon.astro'
 import ArrowTopRight from 'src/components/icons/ArrowTopRight.astro'
 
 const { id, title, description, url, heroImage, technologies } = Astro.props
+console.log(heroImage)
 ---
 
 <Layout title={title} description={description} image={heroImage}>
@@ -17,10 +17,10 @@ const { id, title, description, url, heroImage, technologies } = Astro.props
 				heroImage && (
 					<>
 						<div class='w-full aspect-video'>
-							<Image
+							<img
 								transition:name={`project-image-${id}`}
 								class='w-full mb-6 rounded-md aspect-video object-cover drop-shadow-2xl'
-								src={heroImage}
+								src={heroImage.src}
 								alt={title}
 							/>
 						</div>
