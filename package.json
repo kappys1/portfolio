@@ -1,40 +1,40 @@
 {
-  "name": "portfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^0.18.2",
-    "@astrojs/preact": "^2.1.0",
-    "@astrojs/tailwind": "^3.1.1",
-    "@astrojs/vercel": "^3.2.2",
-    "@tailwindcss/line-clamp": "^0.4.4",
-    "astro": "^3.3.2",
-    "dayjs": "^1.11.7",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-astro": "^0.26.1",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "flowbite": "^1.6.4",
-    "preact": "^10.6.5",
-    "sharp": "^0.32.6",
-    "tailwindcss": "^3.0.24",
-    "vanta": "^0.5.24"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
-    "eslint": "^8.36.0",
-    "flowbite-typography": "^1.0.3",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
-  }
+	"name": "portfolio",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^3.1.5",
+		"@astrojs/preact": "^3.5.2",
+		"@astrojs/tailwind": "^5.1.0",
+		"@astrojs/vercel": "^7.8.0",
+		"@tailwindcss/line-clamp": "^0.4.4",
+		"astro": "^4.15.2",
+		"dayjs": "^1.11.10",
+		"eslint-config-prettier": "^8.10.0",
+		"eslint-config-standard": "^17.1.0",
+		"eslint-plugin-astro": "^0.26.2",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-n": "^15.7.0",
+		"eslint-plugin-promise": "^6.1.1",
+		"flowbite": "^1.8.1",
+		"preact": "^10.19.3",
+		"sharp": "^0.33.1",
+		"tailwindcss": "^3.4.0",
+		"vanta": "^0.5.24"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"eslint": "^8.56.0",
+		"flowbite-typography": "^1.0.3",
+		"prettier": "^3.1.1",
+		"prettier-plugin-astro": "^0.12.2"
+	}
 }

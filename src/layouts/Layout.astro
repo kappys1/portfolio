@@ -2,7 +2,7 @@
 import BaseHead from 'src/components/BaseHead.astro'
 import Header from 'src/components/Header.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-import { ViewTransitions } from 'astro:transitions'
+
 export interface Props {
 	title?: string
 	description?: string
@@ -30,20 +30,19 @@ const {
 			src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js'
 		></script>
 		<script is:inline>
-		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-		document.addEventListener('astro:after-swap', () => {
-			if (
-				localStorage.getItem('theme') === 'dark' ||
-				(!('theme' in localStorage) &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches)
-			) {
-				document.documentElement.classList.add('dark')
-			} else {
-				document.documentElement.classList.remove('dark')
-			}
-		})
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			document.addEventListener('astro:after-swap', () => {
+				if (
+					localStorage.getItem('theme') === 'dark' ||
+					(!('theme' in localStorage) &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches)
+				) {
+					document.documentElement.classList.add('dark')
+				} else {
+					document.documentElement.classList.remove('dark')
+				}
+			})
 		</script>
-		<ViewTransitions />
 	</head>
 	<body class='dark:bg-gray-900 hidden'>
 		<Header />

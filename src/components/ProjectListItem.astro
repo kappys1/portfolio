@@ -12,6 +12,7 @@ const { id, href, img, title, description, technologies } = Astro.props
 	<div class='w-full aspect-video md:max-w-[250px] md:m-4'>
 		<Image
 			transition:name={`project-image-${id}`}
+			transition:persist
 			class='object-cover w-full border-transparent rounded-t-lg aspect-video h-auto md:border md:rounded-md'
 			src={img}
 			id={id}

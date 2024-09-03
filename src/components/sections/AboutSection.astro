@@ -1,5 +1,5 @@
 ---
-import meImage2 from '../../assets/me2.jpg'
+import meImage2 from '../../assets/me2.avif'
 import LazyImage from '../LazyImage.astro'
 ---
 
@@ -37,17 +37,8 @@ import LazyImage from '../LazyImage.astro'
 	<article class='align-middle w-full max-w-[500px] h-[650px]'>
 		<LazyImage
 			src={meImage2}
-			loading={'lazy'}
-			width={meImage2.width / 2}
-			densities={[1.5, 2]}
 			alt='My photo for about section'
 			className='w-full h-full drop-shadow-2xl rounded-lg object-cover dark:drop-shadow-green-50'
 		/>
-		<!-- <CloudinaryImage
-			src='v1/portfolio/me2'
-			alt='My photo for about section'
-			className='w-full drop-shadow-2xl rounded-lg object-cover dark:drop-shadow-green-50 '
-			transformation={'c_fill,g_auto,w_850'}
-		/> -->
 	</article>
 </section>

@@ -42,7 +42,7 @@ const { page } = Astro.props
 					page.data.map(project => (
 						<div class='space-y-5 p-4'>
 							<div class='w-full aspect-video border mb-4 rounded-md drop-shadow-xl md:max-h-48 md:h-full'>
-								<a href={'/project/' + project.slug} role='img'>
+								<a href={'/project/' + project.slug} role='img' accesskey=''>
 									<Image
 										width={project.data.heroImage.width / 2}
 										densities={[1.5, 2]}
