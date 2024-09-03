@@ -13,7 +13,7 @@ technologies: [
 ]
 ---
 
-Feetsolutions is a custom orthotics manufacturing laboratory based in Barcelona, working with various podiatry clinics across Spain. The mission of this project has been to take the customized application they had for their clients and develop new functionalities requested by the client, aiming to improve their product both on the frontend and backend levels.
+[Feetsolutions](https://www.feetsolutions.es/) is a custom orthotics manufacturing laboratory based in Barcelona, working with various podiatry clinics across Spain. The mission of this project has been to take the customized application they had for their clients and develop new functionalities requested by the client, aiming to improve their product both on the frontend and backend levels.
 
 Additionally, we have been involved in the professionalization of the infrastructure, migrating from a generic hosting service to Amazon Web Services (AWS), utilizing various services to optimize the performance and scalability of the application.
 
