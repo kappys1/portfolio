@@ -4,9 +4,10 @@ export interface Props {
 	name: string
 	id: string
 	anchorId: string
+	loading?: 'lazy' | 'eager'
 	className?: string
 }
-const { src, name, id, className = '', anchorId } = Astro.props
+const { src, name, id, className = '', anchorId, loading = 'lazy' } = Astro.props
 
 const technologyInvertColor = ['next']
 ---
@@ -16,6 +17,7 @@ const technologyInvertColor = ['next']
 		data-tooltip-target={anchorId}
 		src={src}
 		alt={name}
+		loading={loading}
 		class={`md:max-h-8 h-12 object-contain max-h-12 max-w-[36px] w-full ${className} ${
 			technologyInvertColor.includes(id) ? 'invert' : ''
 		}`}

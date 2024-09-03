@@ -16,7 +16,7 @@ const { id, href, img, title, description, technologies } = Astro.props
 			src={img.src}
 			id={id}
 			width={img.width / 2}
-			alt={'project image for ' + title}
+			alt={'product ' + title}
 		/>
 	</div>
 
@@ -38,6 +38,7 @@ const { id, href, img, title, description, technologies } = Astro.props
 							id={`${tech.id}`}
 							src={tech.src}
 							name={tech.name}
+							loading="lazy"
 							className={'max-w-[24px]'}
 						/>
 					))

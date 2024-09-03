@@ -18,6 +18,7 @@ console.log(heroImage)
 					<>
 						<div class='w-full aspect-video'>
 							<img
+								loading="lazy"
 								transition:name={`project-image-${id}`}
 								class='w-full mb-6 rounded-md aspect-video object-cover drop-shadow-2xl'
 								src={heroImage.src}
@@ -46,6 +47,7 @@ console.log(heroImage)
 								id={`${tech.id}`}
 								anchorId={`${tech.id}`}
 								src={tech.src}
+								loading="eager"
 								name={tech.name}
 							/>
 						))
