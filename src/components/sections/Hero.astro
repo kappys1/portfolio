@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from 'astro:assets'
+import {  Picture } from 'astro:assets'
 import meImage from '../../assets/me.avif'
 import ChevronDown from '../icons/ChevronDown.astro'
 import GithubIcon from '../icons/GithubIcon.astro'
@@ -73,7 +73,7 @@ import Background from './Background.astro'
 			src={meImage}
 			loading='lazy'
 			alt='Mi imagen de perfil'
-			formats={['avif', 'webp']}
+			formats={['webp']}
 			class='max-w-[350px] self-center h-3/4 border-1 rounded-lg object-contain justify-center -bottom-32 right-0 sm:max-w-[480px] md:mt-16 lg:w-[550px] md:absolute xl:bottom-0'
 		/>
 	</div>
